@@ -1,0 +1,58 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+---
+<MainLayout
+  title="Projects | Phillip Pieterse"
+  description="Project portfolio for Phillip Pieterse, focused on operations, dashboards, and internal systems."
+>
+  <SiteHeader />
+
+  <main class="page-shell">
+    <div class="container">
+      <div class="page-head">
+        <div class="eyebrow">Projects</div>
+        <h1 class="page-title">Practical systems, built for real operations.</h1>
+        <p class="page-copy">
+          This portfolio starts with one flagship project: an Operations Dashboard designed to improve
+          visibility, reporting truth, and intervention speed across a live operational environment.
+        </p>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="badge-row">
+            <span class="badge live">Flagship</span>
+            <span class="tag">Operations</span>
+            <span class="tag">Reporting</span>
+            <span class="tag">Internal tools</span>
+          </div>
+
+          <h2>Operations Dashboard</h2>
+          <p class="project-copy">
+            A live internal dashboard for shipment visibility and exception tracking. Built with a strong
+            focus on actionable KPIs, drilldowns, admin control surfaces, and operational clarity.
+          </p>
+
+          <div class="project-meta">
+            <span class="tag">Next.js</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">Prisma</span>
+            <span class="tag">PostgreSQL</span>
+          </div>
+
+          <div class="project-preview">
+            <img src="/images/projects/operations-dashboard/control-tower.png" alt="Operations dashboard control tower screenshot" />
+          </div>
+
+          <div class="hero-actions">
+            <a class="primary-button" href="/projects/operations-dashboard">Open case study</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <SiteFooter />
+</MainLayout>
