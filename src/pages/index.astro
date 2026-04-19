@@ -1,0 +1,130 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+---
+<MainLayout
+  title="Phillip Pieterse | Operations + Tech"
+  description="Portfolio of Phillip Pieterse, a Specialized Operations Manager building dashboards, operational tools, and modern web systems."
+>
+  <SiteHeader />
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-card">
+          <div class="kicker">Operations + Tech</div>
+          <h1>Building clarity for real operational systems.</h1>
+          <p class="hero-copy">
+            I’m Phillip Pieterse, a Specialized Operations Manager who enjoys building practical digital
+            systems that make complex work clearer and easier to manage. My focus sits at the
+            intersection of operations, dashboards, backend logic, and modern web experiences.
+          </p>
+
+          <div class="hero-actions">
+            <a class="primary-button" href="/projects/operations-dashboard">View flagship project</a>
+            <a class="ghost-button" href="/projects">Browse projects</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-card">
+              <div class="stat-label">Focus</div>
+              <div class="stat-value">Dashboards</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Strength</div>
+              <div class="stat-value">Operational clarity</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Stack</div>
+              <div class="stat-value">Next.js + TypeScript</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Featured work</div>
+          <h2 class="section-title">Flagship case study</h2>
+          <p class="section-copy">
+            A live internal dashboard for shipment visibility, exception tracking, and operational
+            decision support.
+          </p>
+        </div>
+
+        <article class="project-card featured">
+          <div class="badge-row">
+            <span class="badge live">Featured</span>
+            <span class="tag">Next.js</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">Prisma</span>
+            <span class="tag">PostgreSQL</span>
+          </div>
+
+          <h3>Operations Dashboard</h3>
+          <p class="project-copy">
+            Built to surface live KPIs, operational risk, and reporting truth in one place. The goal is
+            simple: reduce blind spots, tighten follow-up, and give teams a system that supports action.
+          </p>
+
+          <div class="project-meta">
+            <span class="tag">Live KPI monitoring</span>
+            <span class="tag">Branch drilldowns</span>
+            <span class="tag">Late-risk visibility</span>
+            <span class="tag">Exception handling</span>
+          </div>
+
+          <div class="project-preview">
+            <img src="/images/projects/operations-dashboard/live-overview.png" alt="Live overview dashboard screenshot" />
+          </div>
+
+          <div class="hero-actions">
+            <a class="primary-button" href="/projects/operations-dashboard">Read case study</a>
+            <a class="ghost-button" href="https://github.com/Sleek1598" target="_blank" rel="noreferrer">GitHub profile</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Approach</div>
+          <h2 class="section-title">What I like building</h2>
+        </div>
+
+        <div class="highlight-grid">
+          <article class="highlight-card">
+            <h3>Operational dashboards</h3>
+            <p class="detail-copy">
+              Interfaces that help teams see the state of work quickly, spot risk early, and act with confidence.
+            </p>
+          </article>
+          <article class="highlight-card">
+            <h3>Internal tools</h3>
+            <p class="detail-copy">
+              Admin surfaces, workflow controls, and support tools that reduce noise and improve consistency.
+            </p>
+          </article>
+          <article class="highlight-card">
+            <h3>Backend-aware UI</h3>
+            <p class="detail-copy">
+              Frontends that respect the logic underneath them, with structure that supports reporting and truth.
+            </p>
+          </article>
+          <article class="highlight-card">
+            <h3>Useful design</h3>
+            <p class="detail-copy">
+              Clean, modern interfaces that look sharp but still prioritize speed, clarity, and decision support.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <SiteFooter />
+</MainLayout>
