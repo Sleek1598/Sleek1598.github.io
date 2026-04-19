@@ -256,7 +256,7 @@ img {
 .detail-value {
   margin-top: 0.45rem;
   max-width: 11ch;
-  font-size: clamp(1.18rem, 2.5vw, 1.72rem);
+  font-size: clamp(1.12rem, 2.2vw, 1.6rem);
   font-weight: 800;
 }
 
@@ -326,10 +326,13 @@ img {
   border-color: rgba(83, 230, 202, 0.25);
 }
 
+.project-card h2,
 .project-card h3,
-.section-title {
+.section-title,
+.case-study-hero h2 {
   font-size: clamp(1.6rem, 4vw, 2.4rem);
-  margin-top: 0.9rem;
+  margin: 0.9rem 0 0;
+  text-wrap: balance;
 }
 
 .project-copy {
@@ -343,11 +346,15 @@ img {
   border: 1px solid rgba(255,255,255,0.06);
 }
 
-.project-preview img,
-.screenshot-card img {
+.project-preview img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.project-preview.contain-frame,
+.screenshot-card.screenshot-frame {
+  background: linear-gradient(180deg, rgba(8, 15, 30, 0.98), rgba(7, 14, 26, 0.98));
 }
 
 .project-preview.contain-frame {
@@ -356,7 +363,6 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(180deg, rgba(8, 15, 30, 0.98), rgba(7, 14, 26, 0.98));
 }
 
 .project-preview.contain-frame img {
@@ -372,10 +378,27 @@ img {
   overflow: hidden;
 }
 
+.screenshot-card.screenshot-frame {
+  padding: 0.85rem;
+}
+
+.screenshot-card.screenshot-frame img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: contain;
+  border-radius: 16px;
+  background: rgba(4, 12, 22, 0.94);
+}
+
 .screenshot-card figcaption {
   padding: 1rem 1rem 1.1rem;
   color: var(--muted);
   border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.screenshot-card.screenshot-frame figcaption {
+  border-top: 0;
+  padding: 0.95rem 0.2rem 0.15rem;
 }
 
 .surface {
@@ -387,6 +410,16 @@ img {
   grid-column: span 4;
 }
 
+.detail-card.metric-card {
+  padding: 1rem;
+}
+
+.detail-card.metric-card .detail-value {
+  max-width: none;
+  font-size: clamp(1.02rem, 1.85vw, 1.4rem);
+  line-height: 1.05;
+}
+
 .highlight-card {
   grid-column: span 6;
 }
@@ -394,12 +427,16 @@ img {
 .case-study-hero {
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
   align-items: start;
 }
 
 .case-study-hero .project-preview {
   margin-top: 0;
+}
+
+.compact-metrics {
+  gap: 0.85rem;
 }
 
 .footer-wrap {
@@ -461,7 +498,8 @@ img {
     border-radius: 24px;
   }
 
-  .project-preview.contain-frame {
+  .project-preview.contain-frame,
+  .screenshot-card.screenshot-frame {
     min-height: auto;
     padding: 0.75rem;
   }
