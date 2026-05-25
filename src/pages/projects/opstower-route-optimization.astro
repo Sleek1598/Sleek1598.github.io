@@ -1,0 +1,115 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+---
+
+<MainLayout
+  title="OpsTower Route Optimization | Phillip Pieterse"
+  description="OpsTower Route Optimization is a route planning and optimization module focused on sequencing, QA, and decision support."
+>
+  <SiteHeader />
+
+  <main class="page-shell">
+    <div class="container">
+      <div class="page-head">
+        <div class="eyebrow">Module</div>
+        <h1 class="page-title">OpsTower Route Optimization</h1>
+        <p class="page-copy">
+          A route planning and optimization module designed to improve stop sequencing, route
+          quality, and decision support for operational teams.
+        </p>
+      </div>
+
+      <section class="surface">
+        <div class="badge-row">
+          <span class="badge live">In progress</span>
+          <span class="tag">Route planning</span>
+          <span class="tag">Optimization</span>
+          <span class="tag">Operational tooling</span>
+        </div>
+
+        <h2 class="section-title">Designed to make route decisions clearer.</h2>
+        <p class="section-copy">
+          This module is being developed as part of the broader OpsTower platform. Its focus
+          is to help operators review routes visually, improve stop order logic, compare
+          optimization methods, and build toward stronger solver-backed planning.
+        </p>
+
+        <div class="detail-grid">
+          <article class="detail-card metric-card">
+            <div class="detail-label">Focus</div>
+            <div class="detail-value">Better sequencing</div>
+          </article>
+          <article class="detail-card metric-card">
+            <div class="detail-label">Purpose</div>
+            <div class="detail-value">Route QA</div>
+          </article>
+          <article class="detail-card metric-card">
+            <div class="detail-label">Direction</div>
+            <div class="detail-value">Solver-backed planning</div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <div class="eyebrow">Planned capabilities</div>
+          <h2 class="section-title">What this module is aiming to deliver</h2>
+        </div>
+
+        <div class="highlight-grid">
+          <article class="highlight-card">
+            <h3>Route map QA</h3>
+            <p class="detail-copy">
+              Visual review tools to inspect routes clearly and spot planning issues before execution.
+            </p>
+          </article>
+
+          <article class="highlight-card">
+            <h3>Optimized sequencing</h3>
+            <p class="detail-copy">
+              Better stop ordering to support more efficient route planning and stronger field execution.
+            </p>
+          </article>
+
+          <article class="highlight-card">
+            <h3>Solver-backed planning</h3>
+            <p class="detail-copy">
+              A longer-term foundation for using optimization logic to support route creation and comparison.
+            </p>
+          </article>
+
+          <article class="highlight-card">
+            <h3>Operational decision support</h3>
+            <p class="detail-copy">
+              A clearer way for operators to compare routes, validate plans, and improve confidence before dispatch.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="surface">
+          <div class="section-head">
+            <div class="eyebrow">Back to platform</div>
+            <h2 class="section-title">Part of the broader OpsTower system.</h2>
+            <p class="section-copy">
+              Route Optimization is one focused module inside OpsTower, alongside operational
+              visibility and transport control.
+            </p>
+          </div>
+
+          <div class="hero-actions">
+            <a class="primary-button" href="/projects/opstower">Back to OpsTower</a>
+            <a class="ghost-button" href="/projects/opstower-transport-control">
+              View Transport Control
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <SiteFooter />
+</MainLayout>

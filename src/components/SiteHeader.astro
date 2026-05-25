@@ -1,0 +1,18 @@
+---
+const pathname = Astro.url.pathname;
+const isActive = (href: string) => pathname === href || pathname.startsWith(`${href}/`);
+---
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="/">
+      <span class="brand-mark"></span>
+      <span>Phillip Pieterse</span>
+    </a>
+
+    <nav class="nav-links" aria-label="Primary">
+      <a class={isActive('/') ? 'active' : ''} href="/">Home</a>
+      <a class={isActive('/projects') ? 'active' : ''} href="/projects">Projects</a>
+      <a class="ghost-button" href="https://github.com/Sleek1598" target="_blank" rel="noreferrer">GitHub</a>
+    </nav>
+  </div>
+</header>

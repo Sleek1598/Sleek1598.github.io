@@ -1,0 +1,120 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+---
+
+<MainLayout
+  title="Projects | Phillip Pieterse"
+  description="Selected operations and systems projects by Phillip Pieterse, centered around the OpsTower platform."
+>
+  <SiteHeader />
+
+  <main class="page-shell">
+    <div class="container">
+      <div class="page-head">
+        <div class="eyebrow">Projects</div>
+        <h1 class="page-title">Systems built for real operations.</h1>
+        <p class="page-copy">
+          This portfolio is currently centered around OpsTower — an operational intelligence
+          platform with focused modules for dashboard visibility, route optimization, and
+          transport control.
+        </p>
+      </div>
+
+      <section class="project-grid">
+        <article class="project-card featured">
+          <div class="badge-row">
+            <span class="badge live">Platform</span>
+            <span class="tag">Operational intelligence</span>
+            <span class="tag">Dashboards</span>
+            <span class="tag">Reporting truth</span>
+          </div>
+
+          <h2>OpsTower</h2>
+          <p class="project-copy">
+            OpsTower is an operational intelligence platform built to improve visibility,
+            reporting truth, and action-taking across live operations. It combines dashboards,
+            intervention workflows, admin control surfaces, and decision support into one
+            structured system.
+          </p>
+
+          <div class="tag-row">
+            <span class="tag">Live visibility</span>
+            <span class="tag">Admin control</span>
+            <span class="tag">Operational follow-up</span>
+          </div>
+
+          <div class="project-preview contain-frame">
+            <img
+              src="/images/projects/opstower/control-tower.png"
+              alt="OpsTower control tower overview"
+            />
+          </div>
+
+          <div class="hero-actions">
+            <a class="primary-button" href="/projects/opstower">Open platform case study</a>
+            <a
+              class="ghost-button"
+              href="https://github.com/Sleek1598"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub profile
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="badge-row">
+            <span class="badge live">Module</span>
+            <span class="tag">Route planning</span>
+            <span class="tag">Optimization</span>
+          </div>
+
+          <h2>OpsTower Route Optimization</h2>
+          <p class="project-copy">
+            A route planning module focused on better stop sequencing, route QA, and stronger
+            optimization workflows for operational teams.
+          </p>
+
+          <div class="tag-row">
+            <span class="tag">Route QA</span>
+            <span class="tag">Stop sequencing</span>
+            <span class="tag">Solver-backed planning</span>
+          </div>
+
+          <div class="hero-actions">
+            <a class="primary-button" href="/projects/opstower-route-optimization">View module</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="badge-row">
+            <span class="badge live">Module</span>
+            <span class="tag">Transport control</span>
+            <span class="tag">Delay intelligence</span>
+          </div>
+
+          <h2>OpsTower Transport Control</h2>
+          <p class="project-copy">
+            A transport visibility module focused on truck movement monitoring, checkpoint
+            control, delay intelligence, and operational follow-up.
+          </p>
+
+          <div class="tag-row">
+            <span class="tag">Truck visibility</span>
+            <span class="tag">Checkpoint tracking</span>
+            <span class="tag">Delay follow-up</span>
+          </div>
+
+          <div class="hero-actions">
+            <a class="primary-button" href="/projects/opstower-transport-control">View module</a>
+          </div>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <SiteFooter />
+</MainLayout>
