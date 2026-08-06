@@ -2,148 +2,216 @@
 import MainLayout from '../layouts/MainLayout.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
+import '../styles/home.css';
 ---
 
 <MainLayout
-  title="Phillip Pieterse | OpsTower, Operations + Tech"
-  description="Portfolio of Phillip Pieterse, a Specialized Operations Manager building OpsTower and practical digital systems for operations, visibility, and control."
+  title="Phillip Pieterse | Logistics Operations & Software Systems"
+  description="Phillip Pieterse is a logistics operations leader, software builder, and founder of RouteFoundry Technologies, building practical systems for real operational problems."
+  socialDescription="Logistics operations leader, software builder, and founder of RouteFoundry Technologies."
 >
-  <SiteHeader />
+  <SiteHeader homeNavigation />
 
-  <main>
-    <section class="hero">
-      <div class="container">
-        <div class="hero-card">
-          <div class="kicker">Operations + Tech</div>
-          <h1>Building clarity for real operational systems.</h1>
-          <p class="hero-copy">
-            I’m Phillip Pieterse, a Specialized Operations Manager building practical digital
-            systems that make complex work clearer and easier to manage. My focus sits at the
-            intersection of operations, dashboards, route optimization, transport visibility,
-            and modern web experiences.
+  <main id="main-content" class="portfolio-home">
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Logistics Operations Leader · Software Builder · Founder</p>
+          <h1>I build practical software for <span>real operations.</span></h1>
+          <p class="hero-lead">
+            I combine hands-on logistics leadership with software engineering to turn fragmented
+            processes, operational data, and manual work into clear, reliable systems.
           </p>
-
           <div class="hero-actions">
-            <a class="primary-button" href="/projects/opstower">View OpsTower</a>
-            <a class="ghost-button" href="/projects">Browse projects</a>
+            <a class="button button-primary" href="#work">View my work</a>
+            <a class="button button-secondary" href="https://routefoundry.co.za" target="_blank" rel="noreferrer">Visit RouteFoundry ↗</a>
           </div>
+        </div>
 
-          <div class="hero-stats">
-            <div class="stat-card">
-              <div class="stat-label">Focus</div>
-              <div class="stat-value">Dashboards</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-label">Strength</div>
-              <div class="stat-value">Operational clarity</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-label">Stack</div>
-              <div class="stat-value">Next.js + TypeScript</div>
-            </div>
-          </div>
+        <aside class="system-card reveal delay-1" aria-labelledby="system-snapshot-title">
+          <svg class="system-route" viewBox="0 0 520 260" aria-hidden="true" focusable="false">
+            <path d="M18 208C92 182 126 106 196 122C258 136 288 191 344 151C392 116 410 54 502 48"></path>
+            <circle cx="18" cy="208" r="7"></circle>
+            <circle cx="196" cy="122" r="7"></circle>
+            <circle cx="344" cy="151" r="7"></circle>
+            <circle cx="502" cy="48" r="7"></circle>
+          </svg>
 
-          <div class="proof-strip">
-            <div class="proof-item">Live KPI monitoring</div>
-            <div class="proof-item">Route optimization</div>
-            <div class="proof-item">Transport control</div>
-            <div class="proof-item">Admin surfaces</div>
+          <div class="system-card-content">
+            <p class="system-kicker" id="system-snapshot-title">System snapshot</p>
+            <div class="system-brand" aria-label="RouteFoundry Technologies">
+              <span class="system-brand-mark" aria-hidden="true">RF</span>
+              <span><strong>RouteFoundry</strong><small>Technologies</small></span>
+            </div>
+
+            <dl class="snapshot-list">
+              <div><dt>Founder</dt><dd>RouteFoundry Technologies</dd></div>
+              <div><dt>Current flagship build</dt><dd>Logistics Intelligence Platform</dd></div>
+              <div><dt>Core focus</dt><dd><span>Operations visibility</span><span>Workflow automation</span><span>Secure backend systems</span></dd></div>
+            </dl>
+
+            <p class="system-status"><span aria-hidden="true"></span>Building practical technology</p>
           </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section-light" id="about">
+      <div class="container split-layout">
+        <div class="section-heading reveal">
+          <p class="section-kicker">About me</p>
+          <h2>Operations experience, translated into better software.</h2>
+        </div>
+        <div class="about-copy reveal delay-1">
+          <p class="large-copy">My background comes from national courier and logistics operations across first-mile, middle-mile, last-mile, returns, performance reporting, and distributed team leadership.</p>
+          <p>That experience taught me where operational systems usually fail: unclear ownership, fragmented information, manual handoffs, weak exception visibility, and tools designed without the operator in mind.</p>
+          <p>Today I build from both sides of the problem. I understand the operational pressure, then use backend architecture, data modelling, APIs, automation, and thoughtful interfaces to create systems people can genuinely use.</p>
+          <blockquote>“I do not just want to build software for operators. I want to build software that operators would genuinely choose to use.”</blockquote>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="work">
       <div class="container">
-        <div class="section-head">
-          <div class="eyebrow">Featured platform</div>
-          <h2 class="section-title">OpsTower</h2>
-          <p class="section-copy">
-            OpsTower is an operational intelligence platform focused on live visibility,
-            reporting truth, route planning, and transport control.
-          </p>
+        <div class="section-heading centered reveal">
+          <p class="section-kicker">Selected work</p>
+          <h2>Businesses, platforms, and systems in progress.</h2>
+          <p>A portfolio built around practical outcomes—not fictional production claims or decorative demos.</p>
         </div>
 
-        <article class="project-card featured">
-          <div class="badge-row">
-            <span class="badge live">Platform</span>
-            <span class="tag">Operational intelligence</span>
-            <span class="tag">Route optimization</span>
-            <span class="tag">Transport control</span>
-          </div>
+        <div class="project-grid">
+          <article class="project-card featured reveal">
+            <div class="project-topline"><span class="project-index">01</span><span class="project-status">Active business</span></div>
+            <h3>RouteFoundry Technologies</h3>
+            <p>A South African technology company helping businesses move from fragmented processes and manual work toward clearer workflows and useful digital systems.</p>
+            <ul class="tag-list"><li>Astro</li><li>TypeScript</li><li>Cloudflare</li><li>Secure enquiries</li></ul>
+            <a href="https://routefoundry.co.za" target="_blank" rel="noreferrer">Visit RouteFoundry <span aria-hidden="true">↗</span></a>
+          </article>
 
-          <h3>OpsTower</h3>
-          <p class="project-copy">
-            OpsTower is a growing operational platform designed to improve visibility, control,
-            and decision-making across live operations. It combines dashboarding, intervention
-            workflows, route optimization, and transport monitoring into one structured system.
-          </p>
+          <article class="project-card reveal delay-1">
+            <div class="project-topline"><span class="project-index">02</span><span class="project-status">Published case study</span></div>
+            <h3>OpsTower</h3>
+            <p>A sanitized case study showing how firsthand courier-operations experience became a working operations-intelligence platform with exception management, reporting, verification, and controlled administration.</p>
+            <ul class="tag-list"><li>Operations intelligence</li><li>Automation</li><li>Architecture</li></ul>
+            <a href="https://github.com/Sleek1598/opstower-case-study" target="_blank" rel="noreferrer">View the case study <span aria-hidden="true">↗</span></a>
+          </article>
 
-          <div class="project-meta">
-            <span class="tag">Live visibility</span>
-            <span class="tag">Reporting truth</span>
-            <span class="tag">Admin control</span>
-            <span class="tag">Decision support</span>
-          </div>
+          <article class="project-card reveal">
+            <div class="project-topline"><span class="project-index">03</span><span class="project-status">Private development</span></div>
+            <h3>Logistics Intelligence Platform</h3>
+            <p>An organization-aware logistics control tower designed to connect shipments, branches, vehicles, alerts, reports, integrations, and future AI-assisted workflows.</p>
+            <ul class="tag-list"><li>Next.js</li><li>NestJS</li><li>PostgreSQL</li><li>Prisma</li></ul>
+            <span class="project-note">Documentation leads. Code follows.</span>
+          </article>
 
-          <div class="project-preview contain-frame">
-            <img
-              src="/images/projects/opstower/live-overview.png"
-              alt="OpsTower live overview screenshot"
-            />
-          </div>
-
-          <div class="hero-actions">
-            <a class="primary-button" href="/projects/opstower">Explore OpsTower</a>
-            <a class="ghost-button" href="/projects">View projects</a>
-          </div>
-        </article>
+          <article class="project-card reveal delay-1">
+            <div class="project-topline"><span class="project-index">04</span><span class="project-status">Demonstration complete</span></div>
+            <h3>Morning Operations Snapshot</h3>
+            <p>A calm, decision-focused operational briefing demonstration with headline indicators, structured alerts, logistics context, and a responsive pressure index.</p>
+            <ul class="tag-list"><li>Decision support</li><li>Accessible UI</li><li>Fictional prototype data</li></ul>
+            <span class="project-note">Honest prototype boundaries by design.</span>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section section-navy" id="capabilities">
       <div class="container">
-        <div class="section-head">
-          <div class="eyebrow">What I like building</div>
-          <h2 class="section-title">Useful systems with operational depth.</h2>
+        <div class="section-heading on-dark reveal">
+          <p class="section-kicker">What I bring</p>
+          <h2>My strongest skill lives between two disciplines.</h2>
+          <p>Understanding the operational problem deeply enough to build the right technical solution.</p>
         </div>
 
-        <div class="highlight-grid">
-          <article class="highlight-card">
-            <h3>Operational dashboards</h3>
-            <p class="detail-copy">
-              Interfaces that help teams see the state of work quickly, spot risk early, and
-              act with confidence.
-            </p>
+        <div class="capability-grid">
+          <article class="capability-card reveal">
+            <span class="capability-label">Operations</span>
+            <h3>Lead, diagnose, simplify.</h3>
+            <ul><li>National courier and logistics operations</li><li>First-, middle-, and last-mile workflows</li><li>Returns and exception management</li><li>Operational KPIs and reporting</li><li>SOP and process development</li><li>Distributed team leadership</li></ul>
           </article>
+          <article class="capability-card reveal delay-1">
+            <span class="capability-label">Engineering</span>
+            <h3>Design, secure, automate.</h3>
+            <ul><li>Backend and platform architecture</li><li>TypeScript and Node.js development</li><li>REST APIs and integrations</li><li>PostgreSQL and data modelling</li><li>Authentication and authorization</li><li>Automated testing and CI/CD</li></ul>
+          </article>
+        </div>
 
-          <article class="highlight-card">
-            <h3>Route optimization tools</h3>
-            <p class="detail-copy">
-              Planning systems that support route QA, stop sequencing, and better operational
-              decision-making.
-            </p>
-          </article>
+        <div class="technology-strip reveal"><span>TypeScript</span><span>Node.js</span><span>NestJS</span><span>Next.js</span><span>Astro</span><span>PostgreSQL</span><span>Prisma</span><span>Docker</span><span>Cloudflare</span><span>GitHub Actions</span></div>
+      </div>
+    </section>
 
-          <article class="highlight-card">
-            <h3>Transport visibility</h3>
-            <p class="detail-copy">
-              Systems that bring clearer movement visibility, checkpoint awareness, and stronger
-              follow-up into transport operations.
-            </p>
-          </article>
+    <section class="section section-light" id="principles">
+      <div class="container split-layout">
+        <div class="section-heading reveal">
+          <p class="section-kicker">Engineering principles</p>
+          <h2>Calm systems. Clear boundaries. Reviewable progress.</h2>
+        </div>
+        <ol class="principles-list reveal delay-1">
+          <li><span>01</span><div><strong>Operational clarity over decorative complexity</strong><p>The interface should help someone decide and act.</p></div></li>
+          <li><span>02</span><div><strong>Secure defaults over temporary shortcuts</strong><p>Trust boundaries belong in the foundation, not the backlog.</p></div></li>
+          <li><span>03</span><div><strong>Small, reviewable changes over uncontrolled rewrites</strong><p>Good delivery stays understandable, testable, and reversible.</p></div></li>
+          <li><span>04</span><div><strong>Honest prototypes over fictional production claims</strong><p>Demonstrations should impress without pretending.</p></div></li>
+        </ol>
+      </div>
+    </section>
 
-          <article class="highlight-card">
-            <h3>Admin and control surfaces</h3>
-            <p class="detail-copy">
-              Tools that reduce noise, improve consistency, and support teams with better
-              visibility and control.
-            </p>
-          </article>
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="contact-card reveal">
+          <div>
+            <p class="section-kicker">Let’s connect</p>
+            <h2>Operators deserve exceptional software.</h2>
+            <p>I’m interested in logistics technology, operational automation, backend engineering, AI-assisted workflows, and practical business systems.</p>
+          </div>
+          <div class="contact-actions">
+            <a class="button button-primary" href="mailto:hello@routefoundry.co.za">Email me</a>
+            <a class="button button-secondary" href="https://github.com/Sleek1598" target="_blank" rel="noreferrer">GitHub ↗</a>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
   <SiteFooter />
+
+  <script is:inline>
+    const revealItems = document.querySelectorAll('.portfolio-home .reveal');
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (!reducedMotion && 'IntersectionObserver' in window) {
+      revealItems.forEach((item) => item.classList.add('reveal-pending'));
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('visible');
+          entry.target.classList.remove('reveal-pending');
+          observer.unobserve(entry.target);
+        });
+      }, { threshold: 0.12 });
+      revealItems.forEach((item) => revealObserver.observe(item));
+    } else {
+      revealItems.forEach((item) => item.classList.add('visible'));
+    }
+
+    const sectionLinks = [...document.querySelectorAll('.primary-nav a[href^="#"]')];
+    const sections = sectionLinks
+      .map((link) => document.querySelector(link.getAttribute('href')))
+      .filter(Boolean);
+
+    if ('IntersectionObserver' in window && sections.length > 0) {
+      const sectionObserver = new IntersectionObserver((entries) => {
+        const visibleSection = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (!visibleSection) return;
+        sectionLinks.forEach((link) => {
+          const isActive = link.getAttribute('href') === `#${visibleSection.target.id}`;
+          link.classList.toggle('active', isActive);
+          if (isActive) link.setAttribute('aria-current', 'location');
+          else link.removeAttribute('aria-current');
+        });
+      }, { rootMargin: '-25% 0px -60% 0px', threshold: [0.1, 0.35] });
+      sections.forEach((section) => sectionObserver.observe(section));
+    }
+  </script>
 </MainLayout>
