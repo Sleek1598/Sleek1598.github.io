@@ -20,22 +20,33 @@ The site presents the intersection of:
 
 ## Stack
 
-The portfolio is intentionally lightweight:
+- Astro
+- semantic HTML
+- responsive CSS
+- small progressive-enhancement JavaScript layer
+- GitHub Pages deployment through GitHub Actions
 
-- semantic HTML;
-- responsive CSS;
-- small progressive-enhancement JavaScript layer;
-- GitHub Pages hosting.
+## Local development
 
-## Local preview
-
-Open `index.html` directly, or serve the repository with any static server:
+Install the pinned dependencies and start Astro's development server:
 
 ```bash
-python -m http.server 8000
+npm ci
+npm run dev
 ```
 
-Then open `http://localhost:8000`.
+Open the local URL printed by Astro, normally `http://localhost:4321`.
+
+## Production validation
+
+Build the same artifact uploaded by `.github/workflows/deploy.yml`:
+
+```bash
+npm run build
+npm run preview
+```
+
+The production output is generated in `dist/`. The GitHub Pages workflow uploads that directory, so deployable pages live under `src/pages`, shared UI under `src/components` and `src/layouts`, styles under `src/styles`, and copied static assets under `public`.
 
 ## Brand
 
