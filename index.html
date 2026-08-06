@@ -19,6 +19,7 @@
     <meta name="twitter:image" content="https://raw.githubusercontent.com/Sleek1598/Sleek1598/main/assets/profile-hero.png" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="hero-refresh.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -41,31 +42,43 @@
 
     <main id="main-content">
       <section class="hero" id="top">
-        <div class="container">
-          <div class="profile-banner reveal">
-            <img src="https://raw.githubusercontent.com/Sleek1598/Sleek1598/main/assets/profile-hero.png" alt="Phillip Pieterse — Logistics Operations and Software Systems" width="1600" height="500" />
-          </div>
-          <div class="hero-grid">
-            <div class="hero-copy reveal">
-              <p class="eyebrow">Logistics Operations Leader · Software Builder · Founder</p>
-              <h1>I build practical technology for real operational problems.</h1>
-              <p class="hero-lead">I combine hands-on logistics leadership with software engineering to turn messy processes into clear workflows, useful dashboards, and reliable systems.</p>
-              <div class="hero-actions">
-                <a class="button button-primary" href="#work">Explore my work</a>
-                <a class="button button-secondary" href="https://routefoundry.co.za" target="_blank" rel="noreferrer">RouteFoundry ↗</a>
-                <a class="text-link" href="https://github.com/Sleek1598" target="_blank" rel="noreferrer">GitHub profile ↗</a>
-              </div>
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Logistics Operations Leader · Software Builder · Founder</p>
+            <h1>I build practical software for <span>real operations.</span></h1>
+            <p class="hero-lead">I combine hands-on logistics leadership with software engineering to turn fragmented processes, operational data, and manual work into clear, reliable systems.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#work">View my work</a>
+              <a class="button button-secondary" href="https://routefoundry.co.za" target="_blank" rel="noreferrer">Visit RouteFoundry ↗</a>
             </div>
-            <aside class="focus-card reveal delay-1" aria-label="Current focus">
-              <div class="focus-card-header"><span class="live-dot" aria-hidden="true"></span><span>Current focus</span></div>
-              <h2>Building the bridge between operations and engineering.</h2>
-              <ul class="focus-list">
-                <li><span>01</span><div><strong>RouteFoundry Technologies</strong><p>Client-ready websites, dashboards, workflows, and operational systems.</p></div></li>
-                <li><span>02</span><div><strong>Logistics Intelligence Platform</strong><p>A secure control tower for visibility, decisions, reporting, and automation.</p></div></li>
-                <li><span>03</span><div><strong>Reusable AI workflows</strong><p>Practical agent-assisted patterns for logistics and software delivery.</p></div></li>
-              </ul>
-            </aside>
           </div>
+
+          <aside class="system-card reveal delay-1" aria-labelledby="system-snapshot-title">
+            <svg class="system-route" viewBox="0 0 520 260" aria-hidden="true" focusable="false">
+              <path d="M18 208C92 182 126 106 196 122C258 136 288 191 344 151C392 116 410 54 502 48" />
+              <circle cx="18" cy="208" r="7" />
+              <circle cx="196" cy="122" r="7" />
+              <circle cx="344" cy="151" r="7" />
+              <circle cx="502" cy="48" r="7" />
+            </svg>
+
+            <div class="system-card-content">
+              <p class="system-kicker" id="system-snapshot-title">System snapshot</p>
+
+              <div class="system-brand" aria-label="RouteFoundry Technologies">
+                <span class="system-brand-mark" aria-hidden="true">RF</span>
+                <span><strong>RouteFoundry</strong><small>Technologies</small></span>
+              </div>
+
+              <dl class="snapshot-list">
+                <div><dt>Founder</dt><dd>RouteFoundry Technologies</dd></div>
+                <div><dt>Current flagship build</dt><dd>Logistics Intelligence Platform</dd></div>
+                <div><dt>Core focus</dt><dd><span>Operations visibility</span><span>Workflow automation</span><span>Secure backend systems</span></dd></div>
+              </dl>
+
+              <p class="system-status"><span aria-hidden="true"></span>Building practical technology</p>
+            </div>
+          </aside>
         </div>
       </section>
 
