@@ -1,0 +1,248 @@
+html {
+  scroll-padding-top: 6rem;
+}
+
+body.nav-open {
+  overflow: hidden;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 1000;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.7rem 1rem;
+  color: #fff;
+  background: #b9470d;
+  border-radius: 0.6rem;
+  transform: translateY(-150%);
+}
+
+.skip-link:focus {
+  transform: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid rgb(244 122 50 / 50%);
+  outline-offset: 4px;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  color: #fff;
+  background: rgb(6 20 33 / 93%);
+  border-bottom: 1px solid rgb(255 255 255 / 10%);
+  backdrop-filter: blur(18px);
+}
+
+.nav-shell {
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.site-header .brand {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.site-header .brand-mark {
+  width: 2.75rem;
+  height: 2.75rem;
+  display: grid;
+  place-items: center;
+  border-radius: 0.85rem 0.85rem 0.85rem 0.25rem;
+  color: #fff;
+  background: #f47a32;
+  box-shadow: none;
+  font-weight: 900;
+}
+
+.site-header .brand-copy {
+  display: grid;
+  line-height: 1.15;
+}
+
+.site-header .brand-copy small {
+  margin-top: 0.25rem;
+  color: #aac0d1;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.primary-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.primary-nav a {
+  padding: 0;
+  color: #d8e3eb;
+  background: transparent;
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.primary-nav a:hover,
+.primary-nav a.active {
+  color: #fff;
+  background: transparent;
+}
+
+.primary-nav .nav-cta {
+  padding: 0.65rem 1rem;
+  color: #fff;
+  background: rgb(244 122 50 / 14%);
+  border: 1px solid rgb(244 122 50 / 50%);
+  border-radius: 999px;
+}
+
+.nav-toggle {
+  display: none;
+  width: 2.8rem;
+  height: 2.8rem;
+  padding: 0.65rem;
+  color: #fff;
+  background: transparent;
+  border: 1px solid rgb(255 255 255 / 20%);
+  border-radius: 0.75rem;
+}
+
+.nav-toggle span:not(.sr-only) {
+  display: block;
+  height: 2px;
+  margin: 4px 0;
+  background: currentColor;
+  transition: 0.18s;
+}
+
+.site-footer {
+  padding: 2.6rem 0;
+  color: #b7c8d5;
+  background: #061421;
+}
+
+.site-footer .footer-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 0;
+}
+
+.site-footer .footer-title {
+  margin: 0;
+  color: #fff;
+  font-weight: 800;
+}
+
+.site-footer .footer-copy,
+.site-footer .footer-meta {
+  margin: 0.25rem 0 0;
+  color: #b7c8d5;
+  font-size: 0.84rem;
+}
+
+.site-footer .footer-meta {
+  text-align: right;
+}
+
+@media (max-width: 760px) {
+  html {
+    scroll-padding-top: 4.75rem;
+  }
+
+  .nav-shell {
+    min-height: 70px;
+  }
+
+  .site-header .brand-copy small {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .primary-nav {
+    position: fixed;
+    top: 70px;
+    right: 0;
+    left: 0;
+    display: grid;
+    gap: 0;
+    padding: 0.7rem 1rem 1.2rem;
+    background: rgb(6 20 33 / 98%);
+    transform: translateY(-130%);
+    visibility: hidden;
+    transition: 0.22s;
+  }
+
+  .primary-nav.open {
+    transform: none;
+    visibility: visible;
+  }
+
+  .primary-nav a {
+    padding: 0.9rem 0.25rem;
+    border-bottom: 1px solid rgb(255 255 255 / 8%);
+  }
+
+  .primary-nav .nav-cta {
+    margin-top: 0.7rem;
+    text-align: center;
+  }
+
+  .nav-toggle[aria-expanded='true'] span:nth-child(2) {
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  .nav-toggle[aria-expanded='true'] span:nth-child(3) {
+    opacity: 0;
+  }
+
+  .nav-toggle[aria-expanded='true'] span:nth-child(4) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
+  .site-footer .footer-wrap {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .site-footer .footer-meta {
+    text-align: left;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,26 +1,49 @@
 ---
 import '../styles/global.css';
+import '../styles/shell.css';
 
 interface Props {
   title?: string;
   description?: string;
+  socialDescription?: string;
+  showSkipLink?: boolean;
 }
 
 const {
-  title = 'Phillip Pieterse | Operations + Tech',
-  description = 'Specialized Operations Manager building practical digital systems, dashboards, and modern web experiences.',
+  title = 'Phillip Pieterse | Logistics Operations & Software Systems',
+  description = 'Phillip Pieterse is a logistics operations leader, software builder, and founder of RouteFoundry Technologies.',
+  socialDescription = description,
+  showSkipLink = false,
 } = Astro.props;
+
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
+const socialImage = 'https://raw.githubusercontent.com/Sleek1598/Sleek1598/main/assets/profile-hero.png';
 ---
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#07111f" />
+    <meta name="theme-color" content="#102a43" />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={socialDescription} />
+    <meta property="og:image" content={socialImage} />
+    <meta property="og:image:alt" content="Phillip Pieterse — Logistics Operations and Software Systems" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={socialDescription} />
+    <meta name="twitter:image" content={socialImage} />
   </head>
   <body>
+    {showSkipLink && <a class="skip-link" href="#main-content">Skip to content</a>}
     <div class="site-shell">
       <slot />
     </div>

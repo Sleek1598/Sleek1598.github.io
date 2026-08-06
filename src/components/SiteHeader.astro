@@ -1,18 +1,67 @@
 ---
+interface Props {
+  homeNavigation?: boolean;
+}
+
+const { homeNavigation = false } = Astro.props;
 const pathname = Astro.url.pathname;
 const isActive = (href: string) => pathname === href || pathname.startsWith(`${href}/`);
 ---
 <header class="site-header">
-  <div class="container nav-wrap">
-    <a class="brand" href="/">
-      <span class="brand-mark"></span>
-      <span>Phillip Pieterse</span>
+  <div class="container nav-shell">
+    <a class="brand" href={homeNavigation ? '#top' : '/'} aria-label="Phillip Pieterse home">
+      <span class="brand-mark" aria-hidden="true">P</span>
+      <span class="brand-copy"><strong>Phillip Pieterse</strong><small>Operations × Software</small></span>
     </a>
 
-    <nav class="nav-links" aria-label="Primary">
-      <a class={isActive('/') ? 'active' : ''} href="/">Home</a>
-      <a class={isActive('/projects') ? 'active' : ''} href="/projects">Projects</a>
-      <a class="ghost-button" href="https://github.com/Sleek1598" target="_blank" rel="noreferrer">GitHub</a>
-    </nav>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+      <span class="sr-only">Toggle navigation</span>
+      <span></span><span></span><span></span>
+    </button>
+
+    {homeNavigation ? (
+      <nav id="primary-navigation" class="primary-nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#principles">Principles</a>
+        <a class="nav-cta" href="#contact">Connect</a>
+      </nav>
+    ) : (
+      <nav id="primary-navigation" class="primary-nav" aria-label="Primary navigation">
+        <a class={isActive('/') && pathname === '/' ? 'active' : ''} href="/">Home</a>
+        <a class={isActive('/projects') ? 'active' : ''} href="/projects">Projects</a>
+        <a class="nav-cta" href="https://github.com/Sleek1598" target="_blank" rel="noreferrer">GitHub ↗</a>
+      </nav>
+    )}
   </div>
 </header>
+
+<script is:inline>
+  const navToggle = document.querySelector('.nav-toggle');
+  const primaryNav = document.getElementById('primary-navigation');
+
+  function closeNavigation() {
+    if (!navToggle || !primaryNav) return;
+    navToggle.setAttribute('aria-expanded', 'false');
+    primaryNav.classList.remove('open');
+    document.body.classList.remove('nav-open');
+  }
+
+  if (navToggle && primaryNav) {
+    navToggle.addEventListener('click', () => {
+      const willOpen = navToggle.getAttribute('aria-expanded') !== 'true';
+      navToggle.setAttribute('aria-expanded', String(willOpen));
+      primaryNav.classList.toggle('open', willOpen);
+      document.body.classList.toggle('nav-open', willOpen);
+    });
+
+    primaryNav.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeNavigation));
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 760) closeNavigation();
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') closeNavigation();
+    });
+  }
+</script>
